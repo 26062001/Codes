@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+void Fibo(int iNo)
+{
+    int iCnt=0,iNo1=0,iNo2=1;
+    for(iCnt=0;iCnt<=iNo;iCnt++)
+    {
+        iNo1=iNo1+iNo2;
+        iNo2=iNo1-iNo2;
+        printf("%d\n",iNo2);
+    }
+}
+int main()
+{
+    int iValue=0;
+    printf("Enter number for print the  fibonachi series\n");
+    scanf("%d",&iValue);
+    Fibo(iValue);
+    
+    return 0;
+}
