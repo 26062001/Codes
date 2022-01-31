@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int Exp(int iBase,int iPower)
+{
+    int iMult=1;
+    while(iPower!=0)
+    {
+        iMult=iMult*iBase;
+        iPower--;
+    }
+    return iMult;
+}
+int main()
+{
+    int iValue1=0,iValue2=0,iRet=0;
+    printf("Enter Base\n");
+    scanf("%d",&iValue1);
+    printf("Enter Power\n");
+    scanf("%d",&iValue2);
+    iRet=Exp(iValue1,iValue2);
+    printf("The Power is:%d\n",iRet);
+    
+    return 0;
+}
