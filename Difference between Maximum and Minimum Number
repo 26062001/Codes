@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+int Max(int *Arr,int iSize)
+{
+    int iMax=0;
+    iMax=Arr[0];
+    for(int iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(iMax<Arr[iCnt])
+        {
+            iMax=Arr[iCnt];
+        }
+    }
+    return iMax;
+}
+
+int Min(int *Arr,int iSize)
+{
+    int iMin=0;
+    iMin=Arr[0];
+    for(int iCnt=0;iCnt<iSize;iCnt++)
+    {
+        if(iMin>Arr[iCnt])
+        {
+            iMin=Arr[iCnt];
+        }
+    }
+    return iMin;
+}
+
+int main()
+{
+    int iLength=0;
+    int *ptr=NULL;
+    
+    cout<<"Enter the number of elements"<<endl;
+    cin>>iLength;
+    ptr=new int[iLength];
+    
+    cout<<"Enter the elements"<<endl;
+    for(int iCnt=0;iCnt<iLength;iCnt++)
+    {
+        cin>>ptr[iCnt];
+    }
+    
+    int iMax=0,iMin=0,iDiff=0;
+    
+    iMax=Max(ptr,iLength);
+    cout<<"The Maximum Value is:"<<iMax<<endl;
+    
+    iMin=Min(ptr,iLength);
+    cout<<"The Minimum Value is:"<<iMin<<endl;
+    
+    iDiff=iMax-iMin;
+    cout<<"The Difference Between Maximum Value and Minimum Value is:"<<iDiff<<endl;
+    
+    return 0;
+}
